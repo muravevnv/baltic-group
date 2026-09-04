@@ -15,8 +15,8 @@
 @font-face {
   font-family: "PlayfairDisplay";
   src:
-    url("../fonts/PlayfairDisplay-Medium.woff") format("woff"),
-    url("../fonts/PlayfairDisplay-Medium.woff2") format("woff2");
+    url("../fonts/PlayfairDisplay-MediumItalic.woff") format("woff"),
+    url("../fonts/PlayfairDisplay-MediumItalic.woff2") format("woff2");
   font-style: italic;
   font-weight: 300;
 }
@@ -714,6 +714,10 @@ main {
 
   &__title {
     margin-bottom: 50px;
+
+    span {
+      color: var(--color-accent);
+    }
 
     @media screen and (max-width: 1023.98px) {
       margin-bottom: 40px;
