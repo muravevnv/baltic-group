@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/swiper-bundle.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>БалтикГрупп</title>
 </head>
@@ -147,35 +148,75 @@
             </div>
         </section>
         <section class="bnr">
-            <picture class="bnr__img">
-                <source srcset="./images/bnr/bnr-sm.webp" media="(max-width: 767.98px)">
-                <source srcset="./images/bnr/bnr-md.webp" media="(max-width: 1023.98px)">
-                <img src="./images/bnr/bnr.webp" alt="">
-            </picture>
-            <div class="bnr__inner">
-                <div class="container">
-                    <div class="bnr__head">
-                        <h2 class="bnr__title h2">
-                            Тут будет
-                            <br>
-                            заголовок баннера 
-                            <br>
-                            <span>в несколько строк</span>
-                        </h2>
-                        <a href="#" class="bnr__btn btn">Оставить заявку</a>
+            <div class="bnr__slider js-bnr-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bnr__item">
+                            <picture class="bnr__item-img">
+                                <source srcset="./images/bnr/bnr-sm.webp" media="(max-width: 767.98px)">
+                                <source srcset="./images/bnr/bnr-md.webp" media="(max-width: 1023.98px)">
+                                <img src="./images/bnr/bnr.webp" alt="">
+                            </picture>
+                            <div class="bnr__item-inner">
+                                <div class="container">
+                                    <div class="bnr__item-head">
+                                        <h2 class="bnr__item-title h2">
+                                            <span>Создаём возможности для вашего бизнеса</span> <br>
+                                            Партнёрство, которому <br>
+                                            можно доверять
+                                        </h2>
+                                        <a href="#" class="bnr__btn btn">Оставить заявку</a>
+                                    </div>
+                                    <div class="bnr__item-info">
+                                        <div class="bnr__item-desc">
+                                            <p>
+                                                Динамично развивающаяся компания и официальный дистрибьютор алкогольных напитков
+                                            </p>
+                                            <p>
+                                                Динамично развивающаяся компания и официальный дистрибьютор алкогольных напитков
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bnr__info">
-                        <div class="bnr__desc">
-                            <p>
-                                Динамично развивающаяся компания и официальный дистрибьютор алкогольных напитков
-                            </p>
-                            <p>
-                                Динамично развивающаяся компания и официальный дистрибьютор алкогольных напитков
-                            </p>
+                    <div class="swiper-slide">
+                        <div class="bnr__item">
+                            <picture class="bnr__item-img">
+                                <source srcset="./images/bnr/bnr-sm.webp" media="(max-width: 767.98px)">
+                                <source srcset="./images/bnr/bnr-md.webp" media="(max-width: 1023.98px)">
+                                <img src="./images/bnr/bnr.webp" alt="">
+                            </picture>
+                            <div class="bnr__item-inner">
+                                <div class="container">
+                                    <div class="bnr__item-head">
+                                        <h2 class="bnr__item-title h2">
+                                            Тут будет
+                                            <br>
+                                            заголовок баннера 
+                                            <br>
+                                            <span>в несколько строк</span>
+                                        </h2>
+                                        <a href="#" class="bnr__btn btn">Оставить заявку</a>
+                                    </div>
+                                    <div class="bnr__item-info">
+                                        <div class="bnr__item-desc">
+                                            <p>
+                                                Динамично развивающаяся компания и официальный дистрибьютор алкогольных напитков
+                                            </p>
+                                            <p>
+                                                Динамично развивающаяся компания и официальный дистрибьютор алкогольных напитков
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
         </section>
         <section class="feedback">
@@ -241,6 +282,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/swiper-bundle.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
