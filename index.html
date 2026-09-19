@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>БалтикГрупп</title>
@@ -16,32 +17,75 @@
                 <a href="#" class="header__logo">
                     <img src="./images/logo.png" alt="">
                 </a>
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">О нас</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Работа в БГ</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Наша жизнь</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Вакансии</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Истории сотрудников</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="#" class="header__contact-us btn btn_outline">
-                    Связаться с нами →
+                <div class="header__menu" data-menu="panel">
+                    <div class="header__menu-overlay"></div>
+                    <div class="header__menu-inner">
+                        <div class="header__top">
+                            <a href="#" class="header__logo">
+                                <img src="./images/logo.png" alt="">
+                            </a>
+                            <button type="button" class="header__close-btn reset-btn" data-menu="close">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 6L18.0208 18.0208" stroke="#0B3E26" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M6 18L18.0208 5.97919" stroke="#0B3E26" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <nav class="header__nav">
+                            <ul class="header__nav-list">
+                                <li class="header__nav-item">
+                                    <a href="#" class="header__nav-link hover-accent">О нас</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#" class="header__nav-link hover-accent">Работа в БГ</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#" class="header__nav-link hover-accent">Наша жизнь</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#" class="header__nav-link hover-accent">Вакансии</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#" class="header__nav-link hover-accent">Истории сотрудников</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#" class="header__nav-link hover-accent">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__contacts">
+                            <div class="header__contact">
+                                <div class="header__contact-label">Телефон</div>
+                                <a href="#" class="header__contact-link">+7 (812) 320-76-77</a>
+                            </div>
+                            <div class="header__contact">
+                                <div class="header__contact-label">Почта</div>
+                                <a href="#" class="header__contact-link">hr@balticgroup.ru</a>
+                            </div>
+                        </div>
+                        <a href="#" class="header__btn btn btn_wide">
+                            Связаться с нами
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#callback" class="header__contact-us btn btn_outline" data-fancybox>
+                    Связаться с нами
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
                 </a>
-                <button type="button" class="header__burger reset-btn">
+                <button type="button" class="header__burger reset-btn" data-menu="burger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -90,8 +134,24 @@
                             Карьерные возможности c&nbsp;<span>«Балтийской Группой»</span>
                         </h1>
                         <div class="hero__actions">
-                            <a href="#" class="hero__vacancies-btn btn">Наши вакансии <span>→</span></a>
-                            <a href="#" class="hero__contact-btn btn">Связаться с нами <span>→</span></a>
+                            <a href="#" class="hero__vacancies-btn btn">Наши вакансии
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
+                            </a>
+                            <a href="#" class="hero__contact-btn btn">Связаться с нами
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <picture class="hero__bg">
@@ -354,7 +414,7 @@
                 </button>
             </div>
         </section>
-        <section class="our-life section">
+        <section class="our-life">
             <div class="container">
                 <div class="our-life__inner">
                     <div class="our-life__head">
@@ -362,9 +422,23 @@
                         <h2 class="our-life__title h2">Наша жизнь</h2>
                     </div>
                     <div class="our-life__slider-nav">
-                        <button type="button" class="slider-nav-btn" data-slider-prev="our-life"></button>
+                        <button type="button" class="slider-nav-btn reset-btn" data-slider-prev="our-life">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.85201 8.6016C1.74667 8.70707 1.6875 8.85004 1.6875 8.9991C1.6875 9.14816 1.74667 9.29113 1.85201 9.3966L7.09226 14.6466C7.14412 14.7003 7.20617 14.7432 7.27478 14.7727C7.34339 14.8023 7.4172 14.8178 7.49189 14.8185C7.56657 14.8192 7.64065 14.805 7.70979 14.7767C7.77893 14.7485 7.84176 14.7067 7.8946 14.6539C7.94744 14.6012 7.98923 14.5384 8.01755 14.4693C8.04586 14.4001 8.06013 14.3261 8.05952 14.2514C8.0589 14.1767 8.04342 14.1029 8.01397 14.0342C7.98453 13.9656 7.9417 13.9035 7.88801 13.8516L3.60701 9.56235L15.7495 9.5706C15.8987 9.5708 16.0418 9.51173 16.1475 9.40638C16.2531 9.30103 16.3126 9.15803 16.3128 9.00885C16.313 8.85967 16.2539 8.71651 16.1485 8.61088C16.0432 8.50525 15.9002 8.4458 15.751 8.4456L3.60551 8.4381L7.88875 4.1466C7.94245 4.09469 7.98528 4.0326 8.01472 3.96396C8.04417 3.89532 8.05965 3.8215 8.06027 3.74681C8.06088 3.67212 8.04661 3.59806 8.0183 3.52894C7.98998 3.45983 7.94819 3.39704 7.89535 3.34425C7.84251 3.29146 7.77968 3.24973 7.71054 3.22148C7.6414 3.19323 7.56732 3.17903 7.49263 3.17971C7.41795 3.1804 7.34414 3.19595 7.27553 3.22546C7.20692 3.25497 7.14487 3.29785 7.09301 3.3516L1.85201 8.6016Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
                         <div class="slider-nav-fraction" data-slider-fraction="our-life"></div>
-                        <button type="button" class="slider-nav-btn" data-slider-next="our-life"></button>
+                        <button type="button" class="slider-nav-btn reset-btn" data-slider-next="our-life">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.148 8.6016C16.2533 8.70707 16.3125 8.85004 16.3125 8.9991C16.3125 9.14816 16.2533 9.29113 16.148 9.3966L10.9077 14.6466C10.8559 14.7003 10.7938 14.7432 10.7252 14.7727C10.6566 14.8023 10.5828 14.8178 10.5081 14.8185C10.4334 14.8192 10.3594 14.805 10.2902 14.7767C10.2211 14.7485 10.1582 14.7067 10.1054 14.6539C10.0526 14.6012 10.0108 14.5384 9.98245 14.4693C9.95414 14.4001 9.93987 14.3261 9.94048 14.2514C9.9411 14.1767 9.95658 14.1029 9.98603 14.0342C10.0155 13.9656 10.0583 13.9035 10.112 13.8516L14.393 9.56235L2.25049 9.5706C2.10131 9.5708 1.95816 9.51173 1.85253 9.40638C1.7469 9.30103 1.68744 9.15803 1.68725 9.00885C1.68705 8.85967 1.74612 8.71651 1.85147 8.61088C1.95681 8.50525 2.09981 8.4458 2.24899 8.4456L14.3945 8.4381L10.1112 4.1466C10.0575 4.09469 10.0147 4.0326 9.98528 3.96396C9.95583 3.89532 9.94035 3.8215 9.93973 3.74681C9.93912 3.67212 9.95339 3.59806 9.9817 3.52894C10.01 3.45983 10.0518 3.39704 10.1047 3.34425C10.1575 3.29146 10.2203 3.24973 10.2895 3.22148C10.3586 3.19323 10.4327 3.17903 10.5074 3.17971C10.5821 3.1804 10.6559 3.19595 10.7245 3.22546C10.7931 3.25497 10.8551 3.29785 10.907 3.3516L16.148 8.6016Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
                     </div>
                     <div class="our-life__slider" data-slider="our-life">
                         <div class="swiper-wrapper">
@@ -395,7 +469,7 @@
         </section>
         <section class="vacancies section">
             <div class="container">
-                <div class="vacancies__inner">
+                <div class="vacancies__inner" data-tabs>
                     <div class="vacancies__head">
                         <div class="vacancies__caption caption">
                             Наши вакансии
@@ -409,7 +483,7 @@
                         </div>
                     </div>
                     <div class="vacancies__tabs">
-                        <button type="button" class="vacancies__tabs-btn reset-btn is-active">
+                        <button type="button" class="vacancies__tabs-btn reset-btn is-selected" data-tab="commerc">
                             коммерция
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -417,7 +491,7 @@
                                     stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
                             </svg>
                         </button>
-                        <button type="button" class="vacancies__tabs-btn reset-btn">
+                        <button type="button" class="vacancies__tabs-btn reset-btn" data-tab="tech">
                             технологи
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -425,7 +499,7 @@
                                     stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
                             </svg>
                         </button>
-                        <button type="button" class="vacancies__tabs-btn reset-btn">
+                        <button type="button" class="vacancies__tabs-btn reset-btn" data-tab="buying">
                             закупки
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -433,7 +507,7 @@
                                     stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
                             </svg>
                         </button>
-                        <button type="button" class="vacancies__tabs-btn reset-btn">
+                        <button type="button" class="vacancies__tabs-btn reset-btn" data-tab="it">
                             It
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -441,7 +515,7 @@
                                     stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
                             </svg>
                         </button>
-                        <button type="button" class="vacancies__tabs-btn reset-btn">
+                        <button type="button" class="vacancies__tabs-btn reset-btn" data-tab="hr">
                             HR
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -449,7 +523,7 @@
                                     stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
                             </svg>
                         </button>
-                        <button type="button" class="vacancies__tabs-btn reset-btn">
+                        <button type="button" class="vacancies__tabs-btn reset-btn" data-tab="lawyer">
                             Юристы
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -459,7 +533,7 @@
                         </button>
                     </div>
                     <div class="vacancies__content">
-                        <div class="vacancies__block is-active">
+                        <div class="vacancies__block is-selected" data-tab-content="commerc">
                             <div class="vacancies__list">
                                 <div class="vacancies__item">
                                     <div class="vacancies__item-title">
@@ -502,6 +576,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="vacancies__block" data-tab-content="hr">
+                            <div class="vacancies__list">
+                                <div class="vacancies__item">
+                                    <div class="vacancies__item-title">
+                                        Менеджер по развитию продаж (БАДы и фармацевтические ингредиенты)
+                                    </div>
+                                    <div class="vacancies__item-desc">
+                                        120 000 – 150 000 ₽ за месяц, на руки
+
+                                        <span>Опыт: 3-6 лет</span>
+                                    </div>
+                                    <a href="#" class="vacancies__item-link">
+                                        Подробнее →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -517,7 +608,10 @@
                     </div>
                     <a href="#" class="bnr__btn btn btn_white">
                         Связаться с нами
-                        <span>→</span>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -542,8 +636,14 @@
                             <picture class="employee__item-img">
                                 <img src="./images/team/team-01.png" alt="">
                             </picture>
-                            <a href="#" class="employee__item-more-info btn">
-                                Подробнее →
+                            <a href="#employee" class="employee__item-more-info btn" data-fancybox>
+                                Подробнее
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
                             </a>
                         </div>
                         <div class="employee__item-head">
@@ -556,46 +656,73 @@
                             <div class="employee__item-head-desc">
                                 «Стабильность тормозит рост. Когда ставишь амбициозные цели, нужно быть гибким»
                             </div>
+                            <button type="button" class="employee__item-head-btn">
+                                Подробнее
+                            </button>
                         </div>
                         <div class="employee__item-details">
-                            <div class="employee__item-details-title">
-                                Михаил Успенский
-                            </div>
-                            <div class="employee__item-details-post">
-                                Директор по маркетингу АО “Балтийская Группа”
+                            <div class="employee__item-details-head">
+                                <div class="employee__item-details-title">
+                                    Михаил Успенский
+                                </div>
+                                <div class="employee__item-details-post">
+                                    Директор по маркетингу АО “Балтийская Группа”
+                                </div>
                             </div>
                             <div class="employee__item-details-quote">
                                 «Стабильность тормозит рост. Когда ставишь амбициозные цели, нужно быть гибким»
                             </div>
+                            <div class="employee__item-details-subtitle">
+                                Моя история
+                            </div>
                             <div class="employee__item-details-desc">
                                 <p>
-                                    | «Балтийская группа» сформировала меня как профессионала. Впервые в компании
-                                    я оказался
-                                    | ещё студентом — пришёл на практику. Сразу после университета меня пригласили
-                                    | на роль полноценного сотрудника отдела маркетинга. Я попал на работу на гребне
-                                    | перемен — структура отдела перестраивалась так, что каждый специалист занимался
-                                    | отдельным направлением. Моя работа была связана с направлением кондитерских
-                                    изделий.
-                                    | Самой большой трудностью в то время оказалось найти грамотного руководителя.
-                                    | За пару лет в отделе сменилось три начальника. После такой чехарды руководство
-                                    | приняло решение — взращивать свои кадры. Так сначала я стал исполняющим
-                                    обязанности,
-                                    | а потом и полноправным начальником отдела маркетинга. За несколько лет мне удалось
-                                    | выстроить систему работы отдела. Безусловно, ещё было куда расти, но отёл работал
-                                    | и бы эффективен! Меня перевели на должность директора по маркетингу АО «Балтийская
+                                    «Балтийская группа» сформировала меня как профессионала. Впервые в компании
+                                    я оказался ещё студентом — пришёл на практику. Сразу после университета меня
+                                    пригласили на роль полноценного сотрудника отдела маркетинга. Я попал на работу
+                                    на гребне перемен — структура отдела перестраивалась так, что каждый специалист
+                                    занимался отдельным направлением. Моя работа была связана с направлением
+                                    кондитерских изделий.
+                                </p>
+                                <p>
+                                    Самой большой трудностью в то время оказалось найти грамотного руководителя. За пару
+                                    лет в отделе сменилось три начальника. После такой чехарды руководство приняло
+                                    решение — взращивать свои кадры. Так сначала я стал исполняющим обязанности, а потом
+                                    и полноправным начальником отдела маркетинга. За несколько лет мне удалось выстроить
+                                    систему работы отдела. Безусловно, ещё было куда расти, но отёл работал
+                                    и бы эффективен! Меня перевели на должность директора по маркетингу АО «Балтийская
                                     группа».
-                                    | Я очень люблю перемены. Считаю, что стабильность тормозит рост. Когда ставишь
-                                    | амбициозные цели, нужно быть гибким, постоянно изменяться под обстоятельства
-                                    | и перестраивать планы.
-                                    | Я постоянно вовлечён в процесс, интересуюсь всем, что происходит в компании.
-                                    | Здесь просто невозможно работать формально и бездумно выполнять свои функции!
-                                    | Чтобы работа приносила удовольствие и все получалось, нужно быть полностью
-                                    вовлечённым.
-                                    | Нужно относиться к работе как к своему личному проекту. Нужно помогать друг другу.
-                                    | Тогда и компания, и каждый её сотрудник уверенно придут к успеху.
+                                </p>
+                                <p>Я очень люблю перемены. Считаю, что стабильность тормозит рост. Когда ставишь
+                                    амбициозные цели, нужно быть гибким, постоянно изменяться под обстоятельства
+                                    и перестраивать планы.
+                                </p>
+                                <p>
+                                    Я постоянно вовлечён в процесс, интересуюсь всем, что происходит в компании. Здесь
+                                    просто невозможно работать формально и бездумно выполнять свои функции! Чтобы работа
+                                    приносила удовольствие и все получалось, нужно быть полностью вовлечённым. Нужно
+                                    относиться к работе как к своему личному проекту. Нужно помогать друг другу.
+                                    Тогда и компания, и каждый её сотрудник уверенно придут к успеху.
                                 </p>
                             </div>
-                            <a href="#" class="employee__item-btn btn"></a>
+                            <a href="#employee" class="employee__item-details-btn btn" data-fancybox>
+                                Подробнее
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
+                            </a>
+                            <button type="button" class="employee__item-details-collapse-btn reset-btn">
+                                Свернуть историю
+                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.15998 10.9727V2.59908L0.969283 5.80043L-0.000177577 4.84162L4.85245 -0.000355601L9.69443 4.84162L8.74627 5.80043L5.54492 2.59908V10.9727H4.15998Z"
+                                        fill="#0B3E26" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="employee__item">
@@ -603,8 +730,14 @@
                             <picture class="employee__item-img">
                                 <img src="./images/team/team-02.png" alt="">
                             </picture>
-                            <a href="#" class="employee__item-more-info btn">
-                                Подробнее →
+                            <a href="#employee" class="employee__item-more-info btn" data-fancybox>
+                                Подробнее
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
                             </a>
                         </div>
                         <div class="employee__item-head">
@@ -617,46 +750,73 @@
                             <div class="employee__item-head-desc">
                                 «Стабильность тормозит рост. Когда ставишь амбициозные цели, нужно быть гибким»
                             </div>
+                            <button type="button" class="employee__item-head-btn">
+                                Подробнее
+                            </button>
                         </div>
                         <div class="employee__item-details">
-                            <div class="employee__item-details-title">
-                                Михаил Успенский
-                            </div>
-                            <div class="employee__item-details-post">
-                                Директор по маркетингу АО “Балтийская Группа”
+                            <div class="employee__item-details-head">
+                                <div class="employee__item-details-title">
+                                    Михаил Успенский
+                                </div>
+                                <div class="employee__item-details-post">
+                                    Директор по маркетингу АО “Балтийская Группа”
+                                </div>
                             </div>
                             <div class="employee__item-details-quote">
                                 «Стабильность тормозит рост. Когда ставишь амбициозные цели, нужно быть гибким»
                             </div>
+                            <div class="employee__item-details-subtitle">
+                                Моя история
+                            </div>
                             <div class="employee__item-details-desc">
                                 <p>
-                                    | «Балтийская группа» сформировала меня как профессионала. Впервые в компании
-                                    я оказался
-                                    | ещё студентом — пришёл на практику. Сразу после университета меня пригласили
-                                    | на роль полноценного сотрудника отдела маркетинга. Я попал на работу на гребне
-                                    | перемен — структура отдела перестраивалась так, что каждый специалист занимался
-                                    | отдельным направлением. Моя работа была связана с направлением кондитерских
-                                    изделий.
-                                    | Самой большой трудностью в то время оказалось найти грамотного руководителя.
-                                    | За пару лет в отделе сменилось три начальника. После такой чехарды руководство
-                                    | приняло решение — взращивать свои кадры. Так сначала я стал исполняющим
-                                    обязанности,
-                                    | а потом и полноправным начальником отдела маркетинга. За несколько лет мне удалось
-                                    | выстроить систему работы отдела. Безусловно, ещё было куда расти, но отёл работал
-                                    | и бы эффективен! Меня перевели на должность директора по маркетингу АО «Балтийская
+                                    «Балтийская группа» сформировала меня как профессионала. Впервые в компании
+                                    я оказался ещё студентом — пришёл на практику. Сразу после университета меня
+                                    пригласили на роль полноценного сотрудника отдела маркетинга. Я попал на работу
+                                    на гребне перемен — структура отдела перестраивалась так, что каждый специалист
+                                    занимался отдельным направлением. Моя работа была связана с направлением
+                                    кондитерских изделий.
+                                </p>
+                                <p>
+                                    Самой большой трудностью в то время оказалось найти грамотного руководителя. За пару
+                                    лет в отделе сменилось три начальника. После такой чехарды руководство приняло
+                                    решение — взращивать свои кадры. Так сначала я стал исполняющим обязанности, а потом
+                                    и полноправным начальником отдела маркетинга. За несколько лет мне удалось выстроить
+                                    систему работы отдела. Безусловно, ещё было куда расти, но отёл работал
+                                    и бы эффективен! Меня перевели на должность директора по маркетингу АО «Балтийская
                                     группа».
-                                    | Я очень люблю перемены. Считаю, что стабильность тормозит рост. Когда ставишь
-                                    | амбициозные цели, нужно быть гибким, постоянно изменяться под обстоятельства
-                                    | и перестраивать планы.
-                                    | Я постоянно вовлечён в процесс, интересуюсь всем, что происходит в компании.
-                                    | Здесь просто невозможно работать формально и бездумно выполнять свои функции!
-                                    | Чтобы работа приносила удовольствие и все получалось, нужно быть полностью
-                                    вовлечённым.
-                                    | Нужно относиться к работе как к своему личному проекту. Нужно помогать друг другу.
-                                    | Тогда и компания, и каждый её сотрудник уверенно придут к успеху.
+                                </p>
+                                <p>Я очень люблю перемены. Считаю, что стабильность тормозит рост. Когда ставишь
+                                    амбициозные цели, нужно быть гибким, постоянно изменяться под обстоятельства
+                                    и перестраивать планы.
+                                </p>
+                                <p>
+                                    Я постоянно вовлечён в процесс, интересуюсь всем, что происходит в компании. Здесь
+                                    просто невозможно работать формально и бездумно выполнять свои функции! Чтобы работа
+                                    приносила удовольствие и все получалось, нужно быть полностью вовлечённым. Нужно
+                                    относиться к работе как к своему личному проекту. Нужно помогать друг другу.
+                                    Тогда и компания, и каждый её сотрудник уверенно придут к успеху.
                                 </p>
                             </div>
-                            <a href="#" class="employee__item-btn btn"></a>
+                            <a href="#employee" class="employee__item-details-btn btn" data-fancybox>
+                                Подробнее
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
+                            </a>
+                            <button type="button" class="employee__item-details-collapse-btn reset-btn">
+                                Свернуть историю
+                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.15998 10.9727V2.59908L0.969283 5.80043L-0.000177577 4.84162L4.85245 -0.000355601L9.69443 4.84162L8.74627 5.80043L5.54492 2.59908V10.9727H4.15998Z"
+                                        fill="#0B3E26" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="employee__item">
@@ -664,8 +824,14 @@
                             <picture class="employee__item-img">
                                 <img src="./images/team/team-03.png" alt="">
                             </picture>
-                            <a href="#" class="employee__item-more-info btn">
-                                Подробнее →
+                            <a href="#employee" data-fancybox class="employee__item-more-info btn">
+                                Подробнее
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
                             </a>
                         </div>
                         <div class="employee__item-head">
@@ -678,49 +844,74 @@
                             <div class="employee__item-head-desc">
                                 «Стабильность тормозит рост. Когда ставишь амбициозные цели, нужно быть гибким»
                             </div>
-                            <button type="button" class="employee__item-head-btn btn btn_wide">
+                            <button type="button" class="employee__item-head-btn">
                                 Подробнее
                             </button>
                         </div>
                         <div class="employee__item-details">
-                            <div class="employee__item-details-title">
-                                Михаил Успенский
+                            <div class="employee__item-details-head">
+                                <div class="employee__item-details-title">
+                                    Михаил Успенский
+                                </div>
+                                <div class="employee__item-details-post">
+                                    Директор по маркетингу АО “Балтийская Группа”
+                                </div>
                             </div>
-                            <div class="employee__item-details-post">
-                                Директор по маркетингу АО “Балтийская Группа”
-                            </div>
+
                             <div class="employee__item-details-quote">
                                 «Стабильность тормозит рост. Когда ставишь амбициозные цели, нужно быть гибким»
                             </div>
+                            <div class="employee__item-details-subtitle">
+                                Моя история
+                            </div>
                             <div class="employee__item-details-desc">
                                 <p>
-                                    | «Балтийская группа» сформировала меня как профессионала. Впервые в компании
-                                    я оказался
-                                    | ещё студентом — пришёл на практику. Сразу после университета меня пригласили
-                                    | на роль полноценного сотрудника отдела маркетинга. Я попал на работу на гребне
-                                    | перемен — структура отдела перестраивалась так, что каждый специалист занимался
-                                    | отдельным направлением. Моя работа была связана с направлением кондитерских
-                                    изделий.
-                                    | Самой большой трудностью в то время оказалось найти грамотного руководителя.
-                                    | За пару лет в отделе сменилось три начальника. После такой чехарды руководство
-                                    | приняло решение — взращивать свои кадры. Так сначала я стал исполняющим
-                                    обязанности,
-                                    | а потом и полноправным начальником отдела маркетинга. За несколько лет мне удалось
-                                    | выстроить систему работы отдела. Безусловно, ещё было куда расти, но отёл работал
-                                    | и бы эффективен! Меня перевели на должность директора по маркетингу АО «Балтийская
+                                    «Балтийская группа» сформировала меня как профессионала. Впервые в компании
+                                    я оказался ещё студентом — пришёл на практику. Сразу после университета меня
+                                    пригласили на роль полноценного сотрудника отдела маркетинга. Я попал на работу
+                                    на гребне перемен — структура отдела перестраивалась так, что каждый специалист
+                                    занимался отдельным направлением. Моя работа была связана с направлением
+                                    кондитерских изделий.
+                                </p>
+                                <p>
+                                    Самой большой трудностью в то время оказалось найти грамотного руководителя. За пару
+                                    лет в отделе сменилось три начальника. После такой чехарды руководство приняло
+                                    решение — взращивать свои кадры. Так сначала я стал исполняющим обязанности, а потом
+                                    и полноправным начальником отдела маркетинга. За несколько лет мне удалось выстроить
+                                    систему работы отдела. Безусловно, ещё было куда расти, но отёл работал
+                                    и бы эффективен! Меня перевели на должность директора по маркетингу АО «Балтийская
                                     группа».
-                                    | Я очень люблю перемены. Считаю, что стабильность тормозит рост. Когда ставишь
-                                    | амбициозные цели, нужно быть гибким, постоянно изменяться под обстоятельства
-                                    | и перестраивать планы.
-                                    | Я постоянно вовлечён в процесс, интересуюсь всем, что происходит в компании.
-                                    | Здесь просто невозможно работать формально и бездумно выполнять свои функции!
-                                    | Чтобы работа приносила удовольствие и все получалось, нужно быть полностью
-                                    вовлечённым.
-                                    | Нужно относиться к работе как к своему личному проекту. Нужно помогать друг другу.
-                                    | Тогда и компания, и каждый её сотрудник уверенно придут к успеху.
+                                </p>
+                                <p>Я очень люблю перемены. Считаю, что стабильность тормозит рост. Когда ставишь
+                                    амбициозные цели, нужно быть гибким, постоянно изменяться под обстоятельства
+                                    и перестраивать планы.
+                                </p>
+                                <p>
+                                    Я постоянно вовлечён в процесс, интересуюсь всем, что происходит в компании. Здесь
+                                    просто невозможно работать формально и бездумно выполнять свои функции! Чтобы работа
+                                    приносила удовольствие и все получалось, нужно быть полностью вовлечённым. Нужно
+                                    относиться к работе как к своему личному проекту. Нужно помогать друг другу.
+                                    Тогда и компания, и каждый её сотрудник уверенно придут к успеху.
                                 </p>
                             </div>
-                            <a href="#" class="employee__item-btn btn"></a>
+                            <a href="#employee" data-fancybox class="employee__item-details-btn btn">
+                                Подробнее
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                                </svg>
+                            </a>
+                            <button type="button" class="employee__item-details-collapse-btn reset-btn">
+                                Свернуть историю
+                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.15998 10.9727V2.59908L0.969283 5.80043L-0.000177577 4.84162L4.85245 -0.000355601L9.69443 4.84162L8.74627 5.80043L5.54492 2.59908V10.9727H4.15998Z"
+                                        fill="#0B3E26" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -735,7 +926,13 @@
                             Откликнитесь или задайте вопрос нашему HR-отделу ! (текст заменим)
                         </div>
                         <a href="#" class="employee__block-btn btn btn_outline">
-                            Наши вакансии →
+                            Наши вакансии
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -756,7 +953,14 @@
                         </h2>
                         <a href="mailto:hr@balticgroup.ru" class="cta__link">hr@balticgroup.ru</a>
                     </div>
-                    <a href="#" class="cta__btn btn">Связаться с нами →</a>
+                    <a href="#" class="cta__btn btn">
+                        Связаться с нами
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                        </svg>
+
+                    </a>
                 </div>
             </div>
         </section>
@@ -770,40 +974,40 @@
                             <img src="./images/logo-white.png" alt="">
                         </a>
                         <div class="footer__desc">
-                            Сайт Балтийской Группы - <a href="#">balticgroup.ru</a>
+                            Сайт Балтийской Группы - <a href="#" class="hover-accent">balticgroup.ru</a>
                         </div>
                     </div>
 
                     <nav class="footer__nav">
                         <ul class="footer__nav-list">
                             <li class="footer__nav-item">
-                                <a href="#" class="footer__nav-link">О нас</a>
+                                <a href="#" class="footer__nav-link hover-accent">О нас</a>
                             </li>
                             <li class="footer__nav-item">
-                                <a href="#" class="footer__nav-link">Работа в БГ</a>
+                                <a href="#" class="footer__nav-link hover-accent">Работа в БГ</a>
                             </li>
                             <li class="footer__nav-item">
-                                <a href="#" class="footer__nav-link">Наша жизнь</a>
+                                <a href="#" class="footer__nav-link hover-accent">Наша жизнь</a>
                             </li>
                             <li class="footer__nav-item">
-                                <a href="#" class="footer__nav-link">Вакансии</a>
+                                <a href="#" class="footer__nav-link hover-accent">Вакансии</a>
                             </li>
                             <li class="footer__nav-item">
-                                <a href="#" class="footer__nav-link">Истории сотрудников</a>
+                                <a href="#" class="footer__nav-link hover-accent">Истории сотрудников</a>
                             </li>
                             <li class="footer__nav-item">
-                                <a href="#" class="footer__nav-link">Контакты</a>
+                                <a href="#" class="footer__nav-link hover-accent">Контакты</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="footer__contacts">
                         <div class="footer__contact">
                             <div class="footer__contact-label">Телефон</div>
-                            <a href="#" class="footer__contact-link">+7 (812) 320-76-77</a>
+                            <a href="#" class="footer__contact-link hover-accent">+7 (812) 320-76-77</a>
                         </div>
                         <div class="footer__contact">
                             <div class="footer__contact-label">Почта</div>
-                            <a href="#" class="footer__contact-link">hr@balticgroup.ru</a>
+                            <a href="#" class="footer__contact-link hover-accent">hr@balticgroup.ru</a>
                         </div>
                     </div>
                 </div>
@@ -812,21 +1016,225 @@
                         © 2023-2025 АО "Балтийская Группа"
                     </div>
                     <div class="footer__links">
-                        <a href="#" class="footer__link">
+                        <a href="#" class="footer__link hover-accent">
                             Политика обработки персональных данных
                         </a>
-                        <a href="#" class="footer__link">
+                        <a href="#" class="footer__link hover-accent">
                             Согласие на обработку персональных данных
                         </a>
                     </div>
                     <div class="footer__developer">
-                        Разработка сайта: Название
+                        Разработка сайта: <a href="#" class="hover-accent">Название</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="popup callback-popup" id="callback" style="display: none;">
+        <div class="callback-popup__inner" data-tabs>
+            <div class="callback-popup__top">
+                <a href="#" class="callback-popup__logo">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="callback-popup__nav">
+                <button class="callback-popup__nav-btn btn btn_grey is-selected" data-tab="question">
+                    Задать вопрос
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                </button>
+                <button class="callback-popup__nav-btn btn btn_grey" data-tab="resume">
+                    Отправить резюме
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                </button>
+            </div>
+            <div class="callback-popup__content">
+                <form action="#" class="callback-popup__form is-selected" data-tab-content="question">
+                    <div class="callback-popup__head">
+                        <div class="callback-popup__title">
+                            Задать вопрос
+                        </div>
+                        <div class="callback-popup__desc">
+                            Мы ответим на ваш вопрос максимально быстро — обычно в течение одного рабочего дня.
+                        </div>
+                    </div>
+                    <div class="callback-popup__inputs">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="" data-required>
+                                <label for="" class="form-label">Имя <span>*</span></label>
+                                <div class="form-error">Заполните поле</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="" data-required>
+                                <label for="" class="form-label">E-mail <span>*</span></label>
+                                <div class="form-error">Заполните поле</div>
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <textarea class="form-control" name="" id="" placeholder=""></textarea>
+                            <label for="" class="form-label">Ваш вопрос</label>
+                        </div>
+                    </div>
+                    <label class="callback-popup__agreement form-checkbox">
+                        <input type="checkbox" data-required>
+                        <i></i>
+                        <span>
+                            Нажимая кнопку «Отправить» вы подтверждаете свое
+                            <a href="#">Согласие на обработку персональных
+                                данных,</a> а также согласие с <a href="#">Политикой обработки персональных
+                                данных</a>
+                        </span>
+                    </label>
+                    <div class="callback-popup__bottom">
+                        <button type="submit" class="btn">
+                            Отправить
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <form action="#" class="callback-popup__form" data-tab-content="resume">
+                    <div class="callback-popup__head">
+                        <div class="callback-popup__title">
+                            Отправить резюме
+                        </div>
+                        <div class="callback-popup__desc">
+                            Мы свяжемся с вами в течение двух рабочих дней.
+                        </div>
+                    </div>
+                    <div class="callback-popup__inputs">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="" data-required>
+                                <label for="" class="form-label">Имя <span>*</span></label>
+                                <div class="form-error">Заполните поле</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="" data-required>
+                                <label for="" class="form-label">Телефон <span>*</span></label>
+                                <div class="form-error">Заполните поле</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="" data-required>
+                                <label for="" class="form-label">E-mail <span>*</span></label>
+                                <div class="form-error">Заполните поле</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="" data-required>
+                                <label for="" class="form-label">Желанная позиция <span>*</span></label>
+                                <div class="form-error">Заполните поле</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="" id="" placeholder="" data-required></textarea>
+                            <label for="" class="form-label">Кратко о себе <span>*</span></label>
+                            <div class="form-error">Заполните поле</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-file">
+                                <input type="file" class="form-file__input" data-required>
+                                <div class="form-file__label">
+                                    Прикрепить резюме <span>*</span>
+                                </div>
+                                <span class="form-file__control">
+                                    <span class="form-file__control-btn">Выберите файл</span>
+                                    <span class="form-file__control-file">Файл не выбран</span>
+                                </span>
+                                <span class="form-file__tip">
+                                    DOC, DOX или PDF до 10 МБ
+                                </span>
+                            </label>
+                            <div class="form-error">Выберите файл</div>
+                        </div>
+                    </div>
+                    <label class="callback-popup__agreement form-checkbox">
+                        <input type="checkbox" data-required>
+                        <i></i>
+                        <span>
+                            Нажимая кнопку «Отправить» вы подтверждаете свое
+                            <a href="#">Согласие на обработку персональных
+                                данных,</a> а также согласие с <a href="#">Политикой обработки персональных
+                                данных</a>
+                        </span>
+                    </label>
+                    <div class="callback-popup__bottom">
+                        <button type="submit" class="btn">
+                            Отправить
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.1304 13.127L14.2554 9.00195L10.1304 4.87695M13.3179 9.00195L3.56787 9.00195"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup_xl employee-popup" id="employee" style="display: none;">
+        <div class="employee-popup__inner" data-tabs>
+            <div class="employee-popup__person">
+                <picture class="employee-popup__person-img">
+                    <img src="./images/team/team-01.png" alt="Михаил Успенский">
+                </picture>
+                <div class="employee-popup__person-name">
+                    Михаил Успенский
+                </div>
+                <div class="employee-popup__person-post">
+                    Директор по маркетингу
+                    АО “Балтийская Группа”
+                </div>
+            </div>
+            <div class="employee-popup__info">
+                <div class="employee-popup__quote">
+                    «Стабильность тормозит рост. Когда ставишь амбициозные цели, нужно быть гибким»
+                </div>
+                <div class="employee-popup__desc">
+                    <p>
+                        «Балтийская группа» сформировала меня как профессионала. Впервые в компании я оказался
+                        ещё студентом — пришёл на практику. Сразу после университета меня пригласили на роль
+                        полноценного сотрудника отдела маркетинга. Я попал на работу на гребне перемен — структура
+                        отдела перестраивалась так, что каждый специалист занимался отдельным направлением. Моя работа
+                        была связана с направлением кондитерских изделий.
+                    </p>
+                    <p>
+                        Самой большой трудностью в то время оказалось найти грамотного руководителя. За пару
+                        лет в отделе сменилось три начальника. После такой чехарды руководство приняло решение —
+                        взращивать свои кадры. Так сначала я стал исполняющим обязанности, а потом и полноправным
+                        начальником отдела маркетинга. За несколько лет мне удалось выстроить систему работы отдела.
+                        Безусловно, ещё было куда расти, но отёл работал и бы эффективен! Меня перевели на должность
+                        директора по маркетингу АО «Балтийская группа».
+                    </p>
+                    <p>
+                        Я очень люблю перемены. Считаю, что стабильность тормозит рост. Когда ставишь амбициозные цели,
+                        нужно быть гибким, постоянно изменяться под обстоятельства и перестраивать планы.
+                    </p>
+                    <p>
+                        Я постоянно вовлечён в процесс, интересуюсь всем, что происходит в компании. Здесь просто
+                        невозможно работать формально и бездумно выполнять свои функции! Чтобы работа приносила
+                        удовольствие и все получалось, нужно быть полностью вовлечённым. Нужно относиться к работе
+                        как к своему личному проекту. Нужно помогать друг другу. Тогда и компания, и каждый её сотрудник
+                        уверенно придут к успеху.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
     <script src="./js/swiper-bundle.js"></script>
     <script src="./js/main.js"></script>
 </body>
